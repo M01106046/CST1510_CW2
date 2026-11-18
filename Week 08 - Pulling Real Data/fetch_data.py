@@ -15,9 +15,9 @@ URL = "https://api.github.com/orgs/python/repos"
 PARAMS = {"per_page": 100}
 RECORDS_KEY = None              # the key that holds the list of records (None if the reply is already a list)
 
-RENAME = {"stargazers_count": "stars", "owner_login": "owner", "license_name": "license"}  # ugly column name -> short column name
-KEEP = ["name", "owner", "language", "stars", "size", "created_at", "pushed_at", "license"]  # the columns you want
-MUST_HAVE = ["name", "language", "stars"]  # drop any row that is empty in these columns
+RENAME = {"stargazers_count": "stars", "owner_login": "owner", "license_name": "license_type"}     # ugly column name -> short column name
+KEEP = ["name", "owner", "language", "stars", "size", "created_at", "pushed_at", "license_type"]   # the columns you want
+MUST_HAVE = ["name", "language", "stars"]                                                          # drop any row that is empty in these columns
 
 RAW_FILE = Path(__file__).parent / "DATA" / "raw.csv"
 
