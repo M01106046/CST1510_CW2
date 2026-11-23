@@ -1,0 +1,8 @@
+x= b"password123"
+P="password123".encode()
+print(P)
+print(list(P))
+y=b"something123"
+
+print(list(x))
+print(list(y))
