@@ -6,3 +6,19 @@ y=b"something123"
 
 print(list(x))
 print(list(y))
+
+
+import bcrypt
+
+passowrd = b"password123"
+
+#Generate two different salts
+salt1 = bcrypt.gensalt()
+salt2 = bcrypt.gensalt()
+
+#Hash the password twice
+hash1 = bcrypt.hashpw(passowrd, salt1)
+hash2 = bcrypt.hashpw(passowrd, salt2)
+
+print("Anna", hash1)
+print("Ben", hash2)
